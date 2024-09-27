@@ -16,6 +16,10 @@ function Book(author, title, pages, read) {
     this.read = read;
 }
 
+Book.prototype.toggleRead = function() {
+    this.read = this.read === "Yes" ? "No" : "Yes";
+}
+
 function addBookToLibrary() {
     const author = document.querySelector("#author").value;
     const title = document.querySelector("#title").value;
@@ -56,7 +60,7 @@ function displayBooks() {
             }
         })
         change.addEventListener("click", (e) => {
-            item.read = item.read === "Yes" ? "No" : "Yes";
+            item.toggleRead();
             read.textContent = "Read: " + item.read;
         })
     }
