@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div>
+        <div class="partition">
+            <button>NEW BOOK</button>
+            <dialog>
+                <form action="" method="post">
+                    <div>
+                        <label for="author">Author</label>
+                        <input id="author" type="text" maxlength="20">
+                    </div>
+                    <div>
+                        <label for="title">Title</label>
+                        <input id="title" type="text" maxlength="20">
+                    </div>
+                    <div>
+                        <label for="pages">Pages</label>
+                        <input id="pages" type="tel" maxlength="20" inputmode="tel">
+                    </div>
+                    <div>
+                        <label>Read</label>
+                        <div>
+                            <input id="yes" name="read" type="radio" value="Yes" checked>
+                            <label for="yes">Yes</label>
+                        </div>
+                        <div>
+                            <input id="no" name="read" value="No" type="radio">
+                            <label for="no">No</label>
+                        </div>
+                    </div>
+                    <button type="button">ADD BOOK</button>
+                </form>
+                <div></div>
+            </dialog>
+        </div>
+        <div class="partition2">
+            <div>
+                <!-- <div>
+                    <div class="change"></div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
