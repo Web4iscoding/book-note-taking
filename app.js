@@ -8,16 +8,54 @@ const add = document.querySelector("button:first-of-type");
 const form = document.querySelector("form");
 const dialogClose = document.querySelector("dialog>div");
 
-// Constructor 
-function Book(author, title, pages, read) {
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.read = read;
-}
+class Book {
+    #author;
+    #title;
+    #pages;
+    #read;
 
-Book.prototype.toggleRead = function() {
-    this.read = this.read === "Yes" ? "No" : "Yes";
+    constructor(author, title, pages, read) {
+        this.#author = author;
+        this.#title = title;
+        this.#pages = pages;
+        this.#read = read;
+    }
+
+    get author() {
+        return this.#author;
+    }
+
+    set author(author) {
+        this.#author = author;
+    }
+
+    get title() {
+        return this.#title;
+    }
+
+    set title(title) {
+        this.#title = title;
+    }
+
+    get pages() {
+        return this.#pages;
+    }
+
+    set pages(pages) {
+        this.#pages = pages;
+    }
+
+    get read() {
+        return this.#read;
+    }
+
+    set read(read) {
+        this.#read = read;
+    }
+
+    toggleRead() {
+        this.read = this.read === "Yes" ? "No" : "Yes";
+    }
 }
 
 function addBookToLibrary() {
@@ -82,10 +120,6 @@ submit.addEventListener("click", (e) => {
         displayBooks();
     }
 });
-
-// addEventListener("DOMContentLoaded", () => {
-//     dialog.showModal();
-// })
 
 dialogClose.addEventListener("click", () => {
     form.reset();
